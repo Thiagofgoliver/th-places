@@ -1,0 +1,178 @@
+/*paleta de cores
+#486EE
+48BAE8
+*/
+
+.fundo-azul {
+    background-color: #486EE8;
+}
+
+.h1 {
+    /* colocar uma fonte boa nas letras */
+    font-family: 'Averia Gruesa Libre', cursive;
+}
+
+div.a {
+    width: 100%;
+
+}
+
+body {
+    color: black;
+}
+
+.form-com-fundo-preto {
+
+    background-color: #48BAE8;
+
+}
+
+.modal-title {
+    color: rgb(0, 0, 0);
+
+}
+
+.modal-body {
+    background-color: #2B788A;
+
+}
+
+.modal-footer {
+    background-color: #2D6A7D;
+}
+
+.modal-header {
+    background-color: #2D6A7D;
+}
+
+.btn-secondary {
+    background-color: #2B6F8A;
+}
+
+.btn-secondary {
+    background-color: #2D6A7D;
+}
+
+.pt-5 {
+    background-color: #4FBBDB;
+}
+
+.btn-close {
+    background-color: #14b8dd;
+}
+
+.text-gelo {
+    background-color: #dbdbdb;
+}
+.fundo-rodape{
+
+    background-color: rgb(68, 64, 64);
+}
+
+.bg-turquesa{
+    background-color: #2D6A7D;
+}
+
+.sombra{
+    box-shadow: 0 0 30px #333;
+}
+
+.card-body{
+    width: 272px;
+    height: 398px;
+}
+ .tamanho-card{
+
+    width: 300px;
+    height: 500px;
+
+}
+
+
+
+
+/* politica de privacidade
+ */
+.aviso-cookies{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+   
+    background-color: rgba(0, 0, 0, 0.589);
+    width: 100%;
+
+}
+
+ 
+.texto-cookies{
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+
+.link-politica{
+    color: rgb(0, 17, 252);
+}
+
+.botao-fechar-cookies{
+    margin-left: 10px;
+}
+
+
+
+/* final politica de privacidade
+ */
+
+.accordion-button{
+    height: 200px;
+}
+
+.bg-azul{
+    background-color: #4FBBDB;
+}
+.sem-borda{
+    border: none;
+}
+
+
+
+.cor-termoecondicao{ 
+    color: blue;
+}
+
+.tirarhamburguer{
+
+    display: none;
+    
+}
+
+
+.accordion-button:not(.collapsed) {
+  
+    background-color: #4FBBDB;
+
+    box-shadow:none;
+
+
+}
+
+
+/* off canvas */
+.btn-offcanvas{
+
+/* background-color:rgba(80,190,255,0.7); */
+
+    margin-left: 1190px;
+
+}
+
+.fundo-azul-offcanvas{
+    background-color: #48BAE8;
+
+}
+.rodapé-off-canvas{
+    background-color: #2B6F8A;
+    
+}
+
