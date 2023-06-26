@@ -36,7 +36,8 @@ body{
             <div class="col-md-6 offset-md-3 col-10 offset-1 p-3 mt-5">
                 <div class="card bg-turquesa sombra tamanho-card">
                     <div class="card-body">
-                        <form class="w-100">
+                        <form class="w-100" method="post" action="{{route('login')}}">
+                            @csrf
                     <p><img src="images/logo-projeto.png " width="200" alt=""></p>    
                 
                         <label for="username">nome</label>
@@ -52,7 +53,8 @@ body{
                         
              
                           <a href="{{route('principal')}}"><button type="button" class="btn btn-primary">avançar</button></a>
-                      
+                          
+                          <a href="{{route('register')}}"><p>cadastre-se</p></a>
                 
                     </form> 
                      

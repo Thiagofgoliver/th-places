@@ -40,12 +40,10 @@
             <a class="nav-link active" href="#" aria-current="page"><span class="visually-hidden">(current)</span></a>
           </li>
           <li class="nav-item">
-            <!-- Modal trigger button -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalId">
-              cadastre-se
-            </button>
+           
 
-            <!-- Modal trigger button -->
+            <a href="{{route('register')}}"><button type="button" class="btn btn-primary">cadastre-se</button></a>
+
             <a href="{{route('login')}}"><button type="button" class="btn btn-primary">Login</button></a>
 
           </li>

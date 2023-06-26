@@ -82,11 +82,11 @@
     </main>
     <footer class="p-5 mt-5 fundo-rodape text-light ">
       <!-- roda pé do site mapa dentro do site -->
-      <p>Siga-Me Nas Redes Sociais</p>
+       <p>Siga-Me Nas Redes Sociais</p>
       <a href="https://github.com/Thiagofgoliver"><i class="fa-brands fa-github fa-2x"></i></a>
       <a href="https://encurtador.com.br/jBU15"> <i class="fa-brands fa-linkedin fa-2x"></i></a>
       <p>&copy; THIAGO FELIPE - Todos os direitos reservados</p>
-    </footer>
+    </footer> 
     <!-- off canvas -->
     <div class="offcanvas offcanvas-end  fundo-azul-offcanvas " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
       <header class="rodapé-off-canvas"> <div class="offcanvas-header">

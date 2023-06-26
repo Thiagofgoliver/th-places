@@ -39,7 +39,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    // Route::get('/principal', function () {
-    //     return view('telaprincipal');
-    // })->name( 'principal');
+    Route::get('/principal', function () {
+        return view('telaprincipal');
+    })->name( 'principal');
 });
