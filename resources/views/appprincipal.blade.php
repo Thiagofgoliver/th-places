@@ -56,13 +56,7 @@
 
     <!-- place footer here -->
 
-    <footer class="p-5 mt-5 fundo-rodape text-light ">
-        <!-- roda pé do site mapa dentro do site -->
-        <p>Siga-Me Nas Redes Sociais</p>
-        <a href="https://github.com/Thiagofgoliver"><i class="fa-brands fa-github fa-2x"></i></a>
-        <a href="https://encurtador.com.br/jBU15"> <i class="fa-brands fa-linkedin fa-2x"></i></a>
-        <p>&copy; THIAGO FELIPE - Todos os direitos reservados</p>
-    </footer>
+
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
