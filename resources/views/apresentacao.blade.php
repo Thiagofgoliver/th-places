@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html lang="pt-br">
 
@@ -139,66 +142,6 @@
 
 
 
-  <!-- Modal cadastre-se -->
-  <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-  <div class="modal fade form-com-fundo-preto" id="modalId" tabindex="-1" data-bs-backdrop="static"
-    data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalTitleId">cadastre-se</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- campo cadastre-se -->
-
-          <!--nome completo-->
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"></label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome completo">
-          </div>
-          <!--final campo nome completo-->
-
-          <!--campo data de nascimento-->
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"></label>
-            <input type="email" class="form-control" id="exampleFormControlInput1"
-              placeholder="Data de nascimento:15/07/2004">
-          </div>
-          <!--final campo data de nascimento-->
-
-          <!--campo email-->
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"></label>
-            <input type="email" class="form-control" id="exampleFormControlInput1"
-              placeholder="EMAIL:thiagofelipe@email.com">
-          </div>
-          <!--final campo email-->
-          <!--campo senha-->
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"></label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="senha">
-          </div>
-          <!--final campo senha-->
-        </div>
-        <div class="modal-footer bottom">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
-          <button type="button" class="btn btn-primary">Salvar</button>
-          <div>
-          </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck2">
-            <label class="form-check-label " for="exampleCheck2">
-
-              <a class="cor-termoecondicao" href="{{route('termos')}}">termos e condições</a></label>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--final modal cadastre-se-->
 
   <!-- Inicio Política de privacidade -->
   <div class="aviso-cookies ">

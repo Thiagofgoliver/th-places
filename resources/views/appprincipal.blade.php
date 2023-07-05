@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-lir">
 
 <head>
     <title>Thplaces</title>
@@ -33,18 +33,6 @@
                     <li class="nav-item ">
                         <a class="nav-link active" href="#" aria-current="page"><span class="visually-hidden">(current)</span></a>
                     </li>
-
-
-                    <!-- <li class="nav-item">
-                       
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalId">
-                            cadastre-se
-                        </button>
-
-                        <a href="login.html"><button type="button" class="btn btn-primary">Login</button></a>
-
-
-                    </li> -->
                 </ul>
             </div>
         </nav>

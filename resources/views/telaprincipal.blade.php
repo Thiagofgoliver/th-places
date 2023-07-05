@@ -6,22 +6,45 @@
 <style>
 
 </style>
+
 <body class="pt-5 ">
   <header>
+
+
     <nav class="navbar navbar-expand-sm navbar-light fundo-azul fixed-top">
 
       <a class="navbar-brand ms-2" href="#"><img src="images/logo-projeto.png " width="100"></a>
-      <form method="POST" action="{{ route('logout') }}">
-        @csrf
-        <a class="nav-link text-light" href="{{ route('logout') }}" onclick="event.preventDefault();
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link active" href="#" aria-current="page"><span class="visually-hidden">(current)</span></a>
+          </li>
+
+          <!-- inicio botao indique local -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalId">
+            Indique
+          </button>
+          <!-- final botao indique local -->
+
+          <li class="nav-item">
+
+
+            <form method="POST" action="{{ route('logout') }}">
+              @csrf
+              <a class="nav-link text-light" href="{{ route('logout') }}" onclick="event.preventDefault();
          this.closest('form').submit(); " role="button">
-          <i class="fa-solid fa-right-from-bracket" ></i>
-          
-        </a>
-      </form>
+                <div class="">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </div>
+              </a>
+            </form>
 
-      
-
+          </li>
+        </ul>
+      </div>
     </nav>
 
   </header>
@@ -78,6 +101,87 @@
       <a href="https://encurtador.com.br/jBU15"> <i class="fa-brands fa-linkedin fa-2x"></i></a>
       <p>&copy; THIAGO FELIPE - Todos os direitos reservados</p>
     </footer>
+
+
+
+
+
+    <!-- Modal indique-->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade form-com-fundo-preto" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitleId">indique um local</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- campo cadastro de indicação -->
+
+            <!--nome-->
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"></label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nome">
+            </div>
+            <!--final campo nome-->
+
+            <!--campo tipo de serviço-->
+            <select name="tipo" id="">
+              <option require>Auto eletrica</option>
+              <option require>Borracharia</option>
+              <option require>Oficina mecanica</option>
+              <option require>Oficina suspensão</option>
+              <option require>funilaria e pintura </option>
+              <option require>Auto peças</option>
+
+              <!-- final campo tipo de serviço-->
+
+
+
+
+
+            </select>
+            <!--final campo data de nascimento-->
+
+            <!--campo nome da rua-->
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"></label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome da Rua">
+            </div>
+
+            <!--final campo nome da rua-->
+            <!--campo bairro-->
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"></label>
+              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Bairro">
+            </div>
+            <!--final campo bairro-->
+
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"></label>
+              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="cidade">
+            </div>
+          </div>
+          <div class="modal-footer bottom">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+            <button type="button" class="btn btn-primary">Salvar</button>
+            <div>
+            </div>
+            <div class="mb-3 form-check">
+
+
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--final modal indique-->
+
+
 
 
 
