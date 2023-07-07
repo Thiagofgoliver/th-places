@@ -9,13 +9,16 @@ use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\Auth;
 
 class IndicacaoController extends Controller
-{
+{    
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
         //
+
+    $indicacoes = Indicacao::all();
+    return view('indicacoes.index', ['indicacoes' => $indicacoes]);
     }
 
     /**
@@ -31,15 +34,39 @@ class IndicacaoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Redirecionar ou retornar uma resposta adequada
+
+        $indicacao = new Indicacao;
+        $indicacao->nome = $request->input('nome');
+        $indicacao->tipo = $request->input('tipo');
+        $indicacao->rua = $request->input('rua');
+        $indicacao->bairro = $request->input('bairro');
+        $indicacao->cidade = $request->input('cidade');
+        $indicacao->save();
+        // return view('termosecondicoes');
+    
+         
+        
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Indicacao $indicacao)
+    public function show(Indicacao $indicacao,$id)
     {
-        //
+        //Lógica para lidar com a indicação não encontrada, 
+        //como redirecionar ou exibir uma mensagem de erro
+
+        $indicacao = Indicacao::find($id);
+
+        if ($indicacao) {
+            return view('indicacoes.show', ['indicacao' => $indicacao]);
+        } else {
+            
+
+        }
+
+        
     }
 
     /**
@@ -53,16 +80,27 @@ class IndicacaoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Indicacao $indicacao)
+    public function update(Request $request, Indicacao $indicacao ,$id)
     {
         //
+        $indicacao = Indicacao::find($id);
+    $indicacao->nome = $request->input('nome');
+    $indicacao->tipo = $request->input('tipo');
+    $indicacao->rua = $request->input('rua');
+    $indicacao->bairro = $request->input('bairro');
+    $indicacao->cidade = $request->input('cidade');
+    $indicacao->save();
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Indicacao $indicacao)
+    public function destroy(Indicacao $indicacao,$id)
     {
         //
+
+        $indicacao = Indicacao::find($id);
+        $indicacao->delete();
+
     }
 }

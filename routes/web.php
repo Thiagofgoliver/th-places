@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IndicacaoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('apresentacao');
 });
+
+Route::get('/teste', [IndicacaoController::class, 'store'] );
+
 
 
 Route::get('/termos', function () {
@@ -42,4 +47,37 @@ Route::middleware([
     Route::get('/principal', function () {
         return view('telaprincipal');
     })->name( 'principal');
+
+    // rota indicacao-store
+    Route::post('/indicacao', 'IndicacaoController@store');
+
+    
+    //rota indicacao-index 
+    Route::get('/indicacao', 'IndicacaoController@index');
+
+
+
+
+    //rota indicacao-update
+    Route::put('/indicacao/{id}', 'IndicacaoController@update');
+
+
+
+    //rota indicacao-delete 
+
+    Route::delete('/indicacao/{id}', 'IndicacaoController@destroy');
+
+
+
+    //rota indicacao-store
+    Route::post('/indicacao', [IndicacaoController::class, 'store'])->name('indicacao.store');
+
+
+
+    //rota indicao-show
+    Route::get('/indicacao/{id}', 'IndicacaoController@show')->name('indicacao.show');
+
+
+
+
 });

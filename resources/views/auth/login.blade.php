@@ -56,7 +56,10 @@ form{
     padding: 50px 35px;
     
 } */
-
+.Botao-entrar{
+    background-color:#2D6A7D;
+    padding: 10px;
+}
 
     </style>
 </head>
@@ -71,17 +74,17 @@ form{
                     <p><img src="images/logo-projeto.png " width="200" alt=""></p>    
                 
                     <div>
-                    <x-label for="email" value="{{ __('Email') }}" />
-                    <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                    <label for="email" value="{{ __('Email') }}" />
+                    <input id="email" placeholder="escreva seu email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
                 </div>
                 
                 <div class="mt-4">
-                    <x-label for="password" value="{{ __('Password') }}" />
-                    <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+                    <label for="password" value="{{ __('Password') }}" />
+                    <input id="password" placeholder="escreva sua senha" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
                 </div>
 
                     <br>             
-                  <input type="submit" value="Entrar">
+                  <input type="submit" value="Entrar" class="Botao-entrar">
                       
                 
                     </form> 
