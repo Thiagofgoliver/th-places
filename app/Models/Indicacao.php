@@ -10,6 +10,11 @@ class Indicacao extends Model
 
     protected $fillable = [
         'user_id',
+        'nome',
+        'tipo',
+        'rua',
+        'bairro',
+        'cidade',
         // Adicione outras colunas da tabela "indicacaos" aqui, se houver
     ];
 

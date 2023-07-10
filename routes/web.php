@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('apresentacao');
 });
 
-Route::get('/teste', [IndicacaoController::class, 'store'] );
+Route::post('/store', [IndicacaoController::class, 'store'] )->name('store');
 
 
 

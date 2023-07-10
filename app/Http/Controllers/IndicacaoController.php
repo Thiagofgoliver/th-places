@@ -17,17 +17,10 @@ class IndicacaoController extends Controller
     {
         //
 
-    $indicacoes = Indicacao::all();
-    return view('indicacoes.index', ['indicacoes' => $indicacoes]);
+        $indicacoes = Indicacao::all();
+        return view('indicacaos.index', ['indicacaos' => $indicacaos]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -37,15 +30,15 @@ class IndicacaoController extends Controller
         //Redirecionar ou retornar uma resposta adequada
 
         $indicacao = new Indicacao;
-        $indicacao->nome = $request->input('nome');
-        $indicacao->tipo = $request->input('tipo');
-        $indicacao->rua = $request->input('rua');
-        $indicacao->bairro = $request->input('bairro');
-        $indicacao->cidade = $request->input('cidade');
-        $indicacao->save();
-        // return view('termosecondicoes');
-    
-         
+        $indicacao->nome = $request->nome;
+        $indicacao->tipo = $request->tipo;
+        $indicacao->rua = $request->rua;
+        $indicacao->bairro = $request->bairro;
+        $indicacao->cidade = $request->cidade;
+        $indicacao->user_id = auth()->user()->id;
+        /* $indicacao->save();
+        return redirect('principal'); */
+        dd($indicacao);               
         
     }
 
@@ -83,7 +76,7 @@ class IndicacaoController extends Controller
     public function update(Request $request, Indicacao $indicacao ,$id)
     {
         //
-        $indicacao = Indicacao::find($id);
+    $indicacao = Indicacao::find($id);
     $indicacao->nome = $request->input('nome');
     $indicacao->tipo = $request->input('tipo');
     $indicacao->rua = $request->input('rua');
