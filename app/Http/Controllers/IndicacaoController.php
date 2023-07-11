@@ -18,7 +18,7 @@ class IndicacaoController extends Controller
         //
 
         $indicacoes = Indicacao::all();
-        return view('indicacaos.index', ['indicacaos' => $indicacaos]);
+        // return view('indicacaos.index', ['indicacaos' => $indicacaos]);
     }
 
 
@@ -36,9 +36,9 @@ class IndicacaoController extends Controller
         $indicacao->bairro = $request->bairro;
         $indicacao->cidade = $request->cidade;
         $indicacao->user_id = auth()->user()->id;
-        /* $indicacao->save();
-        return redirect('principal'); */
-        dd($indicacao);               
+         $indicacao->save();
+        return redirect('principal'); 
+        // dd($indicacao);               
         
     }
 
