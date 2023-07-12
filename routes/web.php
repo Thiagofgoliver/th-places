@@ -31,9 +31,6 @@ Route::get('/termos', function () {
 Route::get('/politica', function () {
     return view('politicadeprivacidade');
 })->name( 'politica');
-Route::get('/principal', function () {
-    return view('telaprincipal');
-})->name( 'principal');
 
 Route::middleware([
     'auth:sanctum',
@@ -44,9 +41,9 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/principal', function () {
-        return view('telaprincipal');
-    })->name( 'principal');
+    Route::get('/principal',[IndicacaoController::class, 'read'] )->name( 'principal');
+
+    
 
     // rota indicacao-store
     Route::post('/indicacao', 'IndicacaoController@store');

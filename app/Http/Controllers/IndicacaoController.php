@@ -42,26 +42,33 @@ class IndicacaoController extends Controller
         
     }
 
+
+
+
     /**
      * Display the specified resource.
      */
-    public function show(Indicacao $indicacao,$id)
-    {
-        //Lógica para lidar com a indicação não encontrada, 
-        //como redirecionar ou exibir uma mensagem de erro
-
-        $indicacao = Indicacao::find($id);
-
-        if ($indicacao) {
-            return view('indicacoes.show', ['indicacao' => $indicacao]);
-        } else {
-            
-
-        }
-
+    public function read(){
+        $user = auth()->user()->id;
+    
+        // carrega as despesas na variavel
+        //SELECT WHERE
+    
+        $indicacaos = Indicacao::where('tipo','Despesa')->where('user_id', $user)->get();
         
-    }
+    
+    
+        // carrega a view passando os dados consultados
+    
+        $dados = [
+            'indicacaos'=> $indicacaos,
 
+            
+        ];
+        return view('telaprincipal',$dados);
+
+     
+      }
     /**
      * Show the form for editing the specified resource.
      */
