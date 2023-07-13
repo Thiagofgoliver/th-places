@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Indicacao;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 // nao sei se é para usar
 // use Illuminate\Support\Facades\Auth;
@@ -54,9 +55,8 @@ class IndicacaoController extends Controller
         // carrega as despesas na variavel
         //SELECT WHERE
     
-        $indicacaos = Indicacao::where('tipo','Despesa')->where('user_id', $user)->get();
+        $indicacaos = Indicacao::where('cidade',Auth()->user()->cidade)->get();
         
-    
     
         // carrega a view passando os dados consultados
     

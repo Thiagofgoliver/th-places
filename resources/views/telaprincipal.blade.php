@@ -12,6 +12,10 @@
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
             <li class="nav-item ">
+                <strong>Olá {{Auth()->user()->name}}</strong>
+            </li>
+
+            <li class="nav-item ">
                 <a class="nav-link active" href="#" aria-current="page"><span
                         class="visually-hidden">(current)</span></a>
             </li>
@@ -95,6 +99,89 @@
             </section>
     </aside>
 </main>
+
+
+<div class="container text-center">
+    <div class="row align-items-start">
+        <div class="col">
+            <h1>
+
+                <strong>
+                    <p class="texto-locais">
+                        Locais Proximo De Voce:
+                    </p>
+                </strong>
+
+
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- card serviços proximos -->
+
+
+<div class="container text-center">
+    <div class="row align-items-start">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="cor-docard ">
+                    <div class="card-body">
+
+
+                        <strong>
+                            <h5 class="card-title texto-serviços">Serviços proximos</h5>
+                        </strong>
+
+
+                        @foreach($indicacaos as $indicacao)
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label"></label>
+                            <input type="text" readonly class="form-control" id="exampleFormControlInput1"
+                                placeholder="{{ $indicacao->nome }}" name="nome">
+                        </div>
+                        @endforeach
+
+                        @foreach($indicacaos as $indicacao)
+                        
+                        <!--tipo-->
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label"></label>
+                            <input type="text" readonly name="tipo" class="form-control" id="exampleFormControlInput1"
+                                placeholder= "{{ $indicacao->tipo }}">
+                        </div>
+                         @endforeach
+                        
+                         @foreach($indicacaos as $indicacao)
+
+                        <!--campo nome da rua-->
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label"></label>
+                            <input type="text" readonly name="rua" class="form-control" id="exampleFormControlInput1"
+                                placeholder="{{ $indicacao->rua }}">
+                        </div>
+                        @endforeach
+
+                        <!--campo bairro-->
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label"></label>
+                            <input type="text" readonly name="bairro" class="form-control" id="exampleInputPassword1"
+                                placeholder="{{ $indicacao->bairro }}">
+                        </div>
+                        <!--final campo bairro-->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- final card serviços proximos -->
+
 <footer class="p-5 mt-5 fundo-rodape-principal text-light ">
     <!-- roda pé do site mapa dentro do site -->
     <p>Siga-Me Nas Redes Sociais</p>

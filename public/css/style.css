@@ -45,6 +45,10 @@ body {
     background-color: #2D6A7D;
 }
 
+.cor-docard{
+    background-color: #2D6A7D;
+}
+
 .btn-secondary {
     background-color: #2B6F8A;
 }
@@ -84,7 +88,7 @@ body {
 
 .card-body{
     width: 272px;
-    height: 398px;
+    height: 390px;
 }
  .tamanho-card{
 
@@ -114,6 +118,17 @@ body {
     font-size: 30px;
     margin-left: 10px;
 }
+.texto-serviços{
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.texto-locais{
+    color: white;
+    font-size: 37px;
+    margin-left: 10px;
+}
+
 
 
 .link-politica{
@@ -180,4 +195,6 @@ body {
     background-color: #2B6F8A;
     
 }
+
+
 
