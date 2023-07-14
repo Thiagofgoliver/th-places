@@ -45,6 +45,13 @@ Route::middleware([
 
     
 
+    Route::get('/minhasindicacao', function () {
+        return view('minhasindicacao');
+    })->name( 'indicacao');
+
+
+    
+
     // rota indicacao-store
     Route::post('/indicacao', 'IndicacaoController@store');
 

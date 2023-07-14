@@ -20,12 +20,11 @@
                         class="visually-hidden">(current)</span></a>
             </li>
 
-            <!-- inicio botao indique local -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalId">
-                Indique
-            </button>
+            <!-- inicio botao do off canvas -->
+            <button class="btn btn-primary fundo-azul" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"> <i class="fa-solid fa-user-gear"></i></button>
 
-            <!-- final botao indique local -->
+            <!-- final do botao off-canvas -->
 
             <li class="nav-item">
 
@@ -108,7 +107,7 @@
 
                 <strong>
                     <p class="texto-locais">
-                        Locais Proximo De Voce:
+                        Locais proximos a sua localização: {{Auth()->user()->cidade}}
                     </p>
                 </strong>
 
@@ -120,63 +119,78 @@
 
 
 
+<!-- off canvas -->
+
+<div class="offcanvas offcanvas-end fundo-azul-offcanvas " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalId">
+            Indique
+        </button>
+    </div>
+</div>
+<!-- off canvas -->
+
+
+
 <!-- card serviços proximos -->
 
 
 <div class="container text-center">
     <div class="row align-items-start">
         <div class="col">
-            <div class="card" style="width: 18rem;">
-                <div class="cor-docard ">
-                    <div class="card-body">
 
 
-                        <strong>
-                            <h5 class="card-title texto-serviços">Serviços proximos</h5>
-                        </strong>
 
 
-                        @foreach($indicacaos as $indicacao)
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                @foreach($indicacaos as $indicacao)
 
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label"></label>
-                            <input type="text" readonly class="form-control" id="exampleFormControlInput1"
-                                placeholder="{{ $indicacao->nome }}" name="nome">
+                <div class="col">
+                    <div class="card">
+                        <div class="cor-docard ">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <strong>
+                                        <h5 class="card-title texto-serviços">serviços proximos</h5>
+                                    </strong>
+                                    <label for="exampleFormControlInput1" class="form-label"></label>
+                                    <input type="text" readonly class="form-control" id="exampleFormControlInput1"
+                                        placeholder="{{ $indicacao->nome }}" name="nome">
+                                </div>
+
+                                <!--tipo-->
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label"></label>
+                                    <input type="text" readonly name="tipo" class="form-control"
+                                        id="exampleFormControlInput1" placeholder="{{ $indicacao->tipo }}">
+                                </div>
+
+                                <!--campo nome da rua-->
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label"></label>
+                                    <input type="text" readonly name="rua" class="form-control"
+                                        id="exampleFormControlInput1" placeholder="{{ $indicacao->rua }}">
+                                </div>
+
+                                <!--campo bairro-->
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label"></label>
+                                    <input type="text" readonly name="bairro" class="form-control"
+                                        id="exampleInputPassword1" placeholder="{{ $indicacao->bairro }}">
+                                </div>
+                                <!--final campo bairro-->
+                            </div>
                         </div>
-                        @endforeach
-
-                        @foreach($indicacaos as $indicacao)
-                        
-                        <!--tipo-->
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label"></label>
-                            <input type="text" readonly name="tipo" class="form-control" id="exampleFormControlInput1"
-                                placeholder= "{{ $indicacao->tipo }}">
-                        </div>
-                         @endforeach
-                        
-                         @foreach($indicacaos as $indicacao)
-
-                        <!--campo nome da rua-->
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label"></label>
-                            <input type="text" readonly name="rua" class="form-control" id="exampleFormControlInput1"
-                                placeholder="{{ $indicacao->rua }}">
-                        </div>
-                        @endforeach
-
-                        <!--campo bairro-->
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label"></label>
-                            <input type="text" readonly name="bairro" class="form-control" id="exampleInputPassword1"
-                                placeholder="{{ $indicacao->bairro }}">
-                        </div>
-                        <!--final campo bairro-->
 
                     </div>
                 </div>
-
+                @endforeach
             </div>
+
         </div>
     </div>
 </div>
@@ -203,7 +217,10 @@
                 <h5 class="modal-title" id="modalTitleId">indique um local</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+
             <div class="modal-body">
+                <h3>sua Localização Atual {{Auth()->user()->cidade}}</h3>
+
 
 
                 <form action="{{route('store')}}" method="post">
