@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 // use Illuminate\Support\Facades\Auth;
 
 class IndicacaoController extends Controller
-{    
+{
     /**
      * Display a listing of the resource.
      */
@@ -37,10 +37,10 @@ class IndicacaoController extends Controller
         $indicacao->bairro = $request->bairro;
         $indicacao->cidade = $request->cidade;
         $indicacao->user_id = auth()->user()->id;
-         $indicacao->save();
-        return redirect('principal'); 
+        $indicacao->save();
+        return redirect('principal');
         // dd($indicacao);               
-        
+
     }
 
 
@@ -49,26 +49,50 @@ class IndicacaoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function read(){
+    public function read()
+    {
         $user = auth()->user()->id;
-    
+
         // carrega as despesas na variavel
         //SELECT WHERE
-    
-        $indicacaos = Indicacao::where('cidade',Auth()->user()->cidade)->get();
-        
-    
+
+        $indicacaos = Indicacao::where('cidade', Auth()->user()->cidade)->get();
+
+
+
         // carrega a view passando os dados consultados
-    
+
         $dados = [
-            'indicacaos'=> $indicacaos,
+            'indicacaos' => $indicacaos,
 
-            
+
+
         ];
-        return view('telaprincipal',$dados);
+        return view('telaprincipal', $dados);
+    }
 
-     
-      }
+
+    public function indicacaouser()
+    {
+        $user = auth()->user()->id;
+
+        // carrega as despesas na variavel
+        //SELECT WHERE
+
+
+
+        $indicauser = Indicacao::where('user_id', Auth()->user()->id)->get();
+
+        // carrega a view passando os dados consultados
+
+        $dados = [
+
+            'indicauser' => $indicauser,
+
+
+        ];
+        return view('minhasindicacao', $dados);
+    }
     /**
      * Show the form for editing the specified resource.
      */
@@ -80,27 +104,53 @@ class IndicacaoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Indicacao $indicacao ,$id)
+    public function update(Request $request, Indicacao $indicacao, $id)
     {
         //
-    $indicacao = Indicacao::find($id);
-    $indicacao->nome = $request->input('nome');
-    $indicacao->tipo = $request->input('tipo');
-    $indicacao->rua = $request->input('rua');
-    $indicacao->bairro = $request->input('bairro');
-    $indicacao->cidade = $request->input('cidade');
-    $indicacao->save();
+        $indicacao = Indicacao::find($id);
+        $indicacao->nome = $request->input('nome');
+        $indicacao->tipo = $request->input('tipo');
+        $indicacao->rua = $request->input('rua');
+        $indicacao->bairro = $request->input('bairro');
+        $indicacao->cidade = $request->input('cidade');
+        $indicacao->save();
+        return redirect('minhasindicacao');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Indicacao $indicacao,$id)
+    // public function destroy(Indicacao $indicacao,$id)
+    // {
+    //     //
+
+    //     $indicacao = Indicacao::find($id);
+    //     $indicacao->delete();
+
+    // }
+
+
+
+    //Carrega o formulário de edição com os dados do registro
+    public function editar($id)
     {
-        //
+        //Carrega o movimento onde o id = $id
+        $Indicacao = Indicacao::findOrFail($id);
 
-        $indicacao = Indicacao::find($id);
-        $indicacao->delete();
+        return view('editar', ['indicacao' => $Indicacao]);
+    }
 
+    public function atualizar(Request $request)
+    {
+        Indicacao::findOrFail($request->id)->update($request->all());
+
+        return redirect('editar');
+    }
+
+    public function deletar($id)
+    {
+        Indicacao::findOrFail($id)->delete();
+
+        return redirect('indicacaouser');
     }
 }

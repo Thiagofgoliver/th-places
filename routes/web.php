@@ -43,11 +43,17 @@ Route::middleware([
 
     Route::get('/principal',[IndicacaoController::class, 'read'] )->name( 'principal');
 
-    
+    Route::get('/editar/{id}',[IndicacaoController::class, 'editar'] )->name( 'editar');
 
-    Route::get('/minhasindicacao', function () {
-        return view('minhasindicacao');
-    })->name( 'indicacao');
+
+    
+// rota minhas indicacao
+    Route::get('/minhasindicacao', [IndicacaoController::class , 'indicacaouser'] )->name( 'indicacao');
+
+// rota update
+
+        
+   
 
 
     
@@ -62,24 +68,26 @@ Route::middleware([
 
 
 
-    //rota indicacao-update
-    Route::put('/indicacao/{id}', 'IndicacaoController@update');
+   
+    //Rotas para o UPDATE - U do CRUD - uma rota para o formulário de atualização
+    Route::get('/editar/{id}', [indicacaoController::class, 'editar'] )->name('editar');
+
+    //Rota para processar a atualização
+    Route::put('/atualiza', [indicacaoController::class, 'atualizar'] )
+    ->name('atualiza');
+
+    //Rota para deletar movimentos
+    Route::delete('/deletar/{id}', [indicacaoController::class, 'deletar'] )->name('deletar');
 
 
 
-    //rota indicacao-delete 
-
-    Route::delete('/indicacao/{id}', 'IndicacaoController@destroy');
-
-
-
-    //rota indicacao-store
-    Route::post('/indicacao', [IndicacaoController::class, 'store'])->name('indicacao.store');
+    // //rota indicacao-store
+    // Route::post('/indicacao', [IndicacaoController::class, 'store'])->name('indicacao.store');
 
 
 
-    //rota indicao-show
-    Route::get('/indicacao/{id}', 'IndicacaoController@show')->name('indicacao.show');
+    // //rota indicao-show
+    // Route::get('/indicacao/{id}', 'IndicacaoController@show')->name('indicacao.show');
 
 
 

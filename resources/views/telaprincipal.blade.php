@@ -21,7 +21,7 @@
             </li>
 
             <!-- inicio botao do off canvas -->
-            <button class="btn btn-primary fundo-azul" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            <button class="btn  fundo-azul" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                 aria-controls="offcanvasRight"> <i class="fa-solid fa-user-gear"></i></button>
 
             <!-- final do botao off-canvas -->
@@ -121,15 +121,28 @@
 
 <!-- off canvas -->
 
-<div class="offcanvas offcanvas-end fundo-azul-offcanvas " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
+<div class="offcanvas offcanvas-end  fundo-azul-offcanvas " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <header class="rodapé-off-canvas"> <div class="offcanvas-header">
+       
+
+        <h5 id="offcanvasRightLabel">
+         <img src="images/logo-projeto.png" width="100"></h5>
+         
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        
+      </div>
+    </header>
+
     <div class="offcanvas-body">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalId">
-            Indique
-        </button>
+       
+       <p><button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalId">
+        <i class="fa-solid fa-location-arrow fa-spin fa-spin-reverse fa-xl">
+            
+        </i></button>indique</p>  
+       <hr>
+
+       <p> <a href="{{ route('indicacao') }}"><i class="fa-solid  fa-xl fa-pen-to-square"></i> </a>   minhas indicações </p>
+       <hr>
     </div>
 </div>
 <!-- off canvas -->
@@ -270,6 +283,9 @@
 
                         <button type="submit" class="btn btn-primary">Salvar</button>
                     </div>
+
+
+                    
 
                 </form>
 

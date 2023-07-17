@@ -47,69 +47,107 @@
     </nav>
   </header>
   <!-- oque é thplaces -->
-  <main>
+   <!-- oque é thplaces -->
+   <main>
 
-   
 
 
-    <aside>
-      <figure>
+
+<aside>
+    <figure>
         <section id="Texto e assunto oficial">
-          <div class="container mt-5">
+            <div class="container mt-5">
 
-            <img src="images/logo-projeto.png" alt="">
-            <p class="container">
-            <h2><strong>OQUE É THPLACES </strong></h2>
-            is Lorem Ipsum? Lorem Ipsum is simply a simulation of text from the printing and typesetting industry, and
-            has been in use since the 16th century, when an unknown printer took a tray of type and shuffled it to make
-            a book of type designs. Lorem Ipsum has survived not only five centuries, but also the leap to desktop
-            publishing, remaining essentially unchanged. It became popular in the 60's, when Letraset launched decals
-            containing Lorem Ipsum passages, and more recently when it started to be integrated into desktop publishing
-            software such as Aldus PageMaker. Why do we use it? It is a known fact that a reader will be distracted by
-            the readable text content of a page when examining its layout. The advantage of using Lorem Ipsum is that it
-            has a normal distribution of letters, as opposed to "Content here, content here", making it look like
-            readable text. Many publishing software and web page editors now use Lorem Ipsum as their default template
-            text, and a quick search for 'lorem ipsum' will show many websites still in their construction phase.
-            Several new versions have appeared over the years, occasionally by accident, and sometimes on purpose
-            (injecting humour, and the like). Where does he come from? Contrary to popular belief, Lorem Ipsum is not
-            simply random text. Over 2000 years old, its roots can be found in a work of classical Latin literature
-            dating back to 45 BC. Richard McClintock, a professor of Latin at Hampden-Sydney College in Virginia,
-            researched one of the more obscure Latin words, consectetur, from a passage in Lorem Ipsum, and, looking
-            through citations of the word in classical literature, discovered its undoubted significance. origin. Lorem
-            Ipsum comes from sections 1.10.32 and 1.10.33 of Cicero's "de Finibus Bonorum et Malorum" (The Extremes of
-            Good and Evil), written in 45 BC. This book is a treatise on the theory of ethics that was very popular in
-            the Renaissance era. The first line of Lorem Ipsum, "Lorem Ipsum dolor sit amet..." comes from a line in
-            section 1.10.32. The original standard excerpt from Lorem Ipsum,is Lorem Ipsum? Lorem Ipsum is simply a
-            simulation of text from the printing and typesetting industry, and has been in use since the 16th century,
-            when an unknown printer took a tray of type and shuffled it to make a book of type designs. Lorem Ipsum has
-            survived not only five centuries, but also the leap to desktop publishing, remaining essentially unchanged.
-            It became popular in the 60's, when Letraset launched decals containing Lorem Ipsum passages, and more
-            recently when it started to be integrated into desktop publishing software such as Aldus PageMaker. Why do
-            we use it? It is a known fact that a reader will be distracted by the readable text content of a page when
-            examining its layout. The advantage of using Lorem Ipsum is that it has a normal distribution of letters, as
-            opposed to "Content here, content here", making it look like readable text. Many publishing software and web
-            page editors now use Lorem Ipsum as their default template text, and a quick search for 'lorem ipsum' will
-            show many websites still in their construction phase. Several new versions have appeared over the years,
-            occasionally by accident, and sometimes on purpose (injecting humour, and the like). Where does he come
-            from? Contrary to popular belief, Lorem Ipsum is not simply random text. Over 2000 years old, its roots can
-            be found in a work of classical Latin literature dating back to 45 BC. Richard McClintock, a professor of
-            Latin at Hampden-Sydney College in Virginia, researched one of the more obscure Latin words, consectetur,
-            from a passage in Lorem Ipsum, and, looking through citations of the word in classical literature,
-            discovered its undoubted significance. origin. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of
-            Cicero's "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil), written in 45 BC. This book is a
-            treatise on the theory of ethics that was very popular in the Renaissance era. The first line of Lorem
-            Ipsum, "Lorem Ipsum dolor sit amet..." comes from a line in section 1.10.32. The original standard excerpt
-            from Lorem Ipsum.
+                <img src="images/logo-projeto.png" alt="">
+                <html>
 
-            </p>
+                <head>
+                    <title>Documentação sobre thplaces</title>
+                </head>
 
-            <br>
+                <body>
+                    <h1>Oque é  thplaces</h1>
+
+                    
+
+                    <p>thplaces é uma aplicação web desenvolvida em Laravel e Bootstrap 5, com o objetivo de
+                        auxiliar os usuários na mobilidade urbana, fornecendo indicações de serviços automotivos
+                        próximos ao seu local. Essa documentação fornecerá uma visão geral sobre a plataforma,
+                        suas principais funcionalidades e o guia de uso.</p>
+
+                    <h2>Funcionalidades Principais</h2>
+
+                    <h3>Localização Automática</h3>
+                    <p>A aplicação utiliza a função de localização automática para identificar a posição do
+                        usuário. Isso permite que a plataforma sugira serviços automotivos próximos com base em
+                        sua localização atual.</p>
+
+                    <h3>Pesquisa de Serviços Automotivos</h3>
+                    <p>Os usuários podem pesquisar serviços automotivos específicos, como oficinas, postos de
+                        gasolina, lava-rápidos, entre outros. Basta digitar o tipo de serviço desejado na barra
+                        de pesquisa e a plataforma retornará os resultados relevantes com base na localização do
+                        usuário.</p>
+
+                    <h3>Avaliações e Comentários</h3>
+                    <p>Os usuários têm a oportunidade de avaliar e deixar comentários sobre os serviços
+                        automotivos que utilizaram. Essas avaliações e comentários são úteis para outros
+                        usuários tomarem decisões informadas sobre qual serviço automotivo escolher.</p>
+
+                    <h3>Navegação</h3>
+                    <p>A aplicação fornece instruções detalhadas para auxiliar os usuários a chegarem ao serviço
+                        automotivo escolhido. Isso inclui direções turn-by-turn e estimativa de tempo de viagem.
+                    </p>
+
+                    <h3>Favoritos</h3>
+                    <p>Os usuários podem salvar seus serviços automotivos favoritos para acesso rápido no
+                        futuro. Basta clicar no botão "Adicionar aos Favoritos" para salvar o serviço automotivo
+                        em sua lista pessoal.</p>
+
+                    <h2>Guia de Uso</h2>
+
+                    <p><strong>Pontos para utilizar o thplaces:</strong></p>
+
+                    <ol>
+                        <li>Acesse a aplicação web thplaces em <a
+                                href="http://www.thplaces.com">www.thplaces.com</a>.</li>
+                        <li>Permite acesso à sua localização atual para obter uma melhor experiência.</li>
+                        <li>Utilize a barra de pesquisa para encontrar um serviço automotivo específico,
+                            inserindo palavras-chave relevantes.</li>
+                        <li>Selecione um serviço automotivo nos resultados da pesquisa para visualizar mais
+                            informações.</li>
+                        <li>Leia avaliações e comentários para obter opiniões de outros usuários sobre o serviço
+                            automotivo.</li>
+                        <li>Se desejar, adicione o serviço automotivo aos seus Favoritos para acesso rápido no
+                            futuro.</li>
+                        <li>Utilize a função de navegação para obter instruções detalhadas para chegar ao
+                            serviço automotivo escolhido.</li>
+                    </ol>
+
+                    <h2>Dicas para aproveitar ao máximo o thplaces</h2>
+
+                    <ul>
+                        <li>Mantenha a localização automática ativada para obter resultados mais precisos.</li>
+                        <li>Leia avaliações e comentários de outros usuários antes de escolher um serviço
+                            automotivo.</li>
+                        <li>Salve seus serviços automotivos favoritos para acesso rápido no futuro.</li>
+                        <li>Utilize as instruções de navegação para chegar ao serviço automotivo escolhido de
+                            forma eficiente.</li>
+                    </ul>
+
+                    <p>Esperamos que esta documentação tenha fornecido informações úteis sobre a utilização da
+                        aplicação web thplaces. Aproveite ao máximo a plataforma e tenha uma experiência
+                        agradável na sua mobilidade urbana!</p>
+                </body>
+
+                </html>
+
+                <br>
         </section>
 
-    </aside>
+</aside>
 
 
-  </main>
+</main>
 
 
 
